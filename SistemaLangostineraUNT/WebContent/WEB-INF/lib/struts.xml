@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+   <constant name="struts.devMode" value="false" />
+   <package name="default" namespace="/" extends="struts-default">
+     <action name="gestionproducto" class="actions.ProductoAction" method="ConsultaProductos" >
+        <result name="success">/MostrarProductos1.jsp</result>
+     </action>
+     <action name="consultaProducto" class="actions.ProductoAction" method="ConsultaProducto" >
+        <result name="success" >/MostrarProducto.jsp</result>
+        <result name="error">/Error.jsp</result>
+     </action>
+
+     <action name="consultaProducto2" class="actions.ProductoAction" method="ConsultaProducto2" >
+        <result name="success">/MostrarProducto2.jsp</result>
+     </action>
+
+
+     
+     <action name="ConsultaProducto1" class="actions.ProductoAction" method="ConsulaProducto1">
+       <result>/MostrarDatosProducto1.jsp </result> 
+     </action>
+     
+     
+     <action name="MuestraProductosEnSelect" class="actions.ProductoAction" method="ConsultaProductos">
+       <result>/MuestraProductosEnSelect.jsp </result> 
+     </action>
+     
+     <action name="MuestraCategoriasEnSelect_" class="actions.CategoriaAction" method="ConsultaCategoriasMap">
+       <result>/AgregaP.jsp </result>         
+     </action>
+
+
+
+     <action name="AgregarProductoAct" class="actions.CategoriaAction" method="ConsultaCategoriasMap">
+       <result>/AgregarProducto.jsp </result>         
+     </action>
+
+
+
+	<action name="AgregarProductoAct1" class="actions.CategoriaAction" method="ConsultaCategoriasMap1">
+		<result>/AgregarProducto1.jsp</result>
+		
+	</action>
+	<action name="GrabarProducto" class="actions.ProductoAction" method="GrabarProducto">
+       <result>/MenuPrincipal.jsp </result>         
+     </action>
+	<action name="GrabarProducto1" class="actions.ProductoAction" method="GrabarProducto1">
+       <result>/MenuPrincipal.jsp </result>         
+     </action>
+
+
+     
+     
+     <action name="AgregaPResultado_" class="actions.ProductoAction" method="AgregaProducto_">
+       <result>/Menu.jsp </result>         
+     </action>
+     
+    
+   </package>
+</struts>	
